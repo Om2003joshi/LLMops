@@ -1,0 +1,14 @@
+﻿LLMops/
+├── LICENSE
+├── main.py
+├── pyproject.toml
+├── README.md
+├── .gitignore
+├── data/
+├── mulit_doc_chat/
+│   └── config/
+│       └── tt/
+├── notebook/
+├── static/
+├── templets/
+└── test/
