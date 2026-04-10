@@ -1,0 +1,33 @@
+python-dotenv==1.1.1
+structlog==24.1.0
+
+# LangChain ecosystem (aligned)
+langchain==0.3.27
+langchain-community==0.3.27
+langchain-core==0.3.72
+
+# LLM Providers (STRICT versions)
+langchain-groq==0.3.6
+langchain-openai==0.2.10
+langchain-google-genai==2.1.8
+
+# Document processing
+docx2txt==0.9
+
+# Vector DB
+faiss-cpu==1.8.0
+
+# Backend
+fastapi==0.115.6
+uvicorn==0.32.1
+Jinja2==3.1.4
+python-multipart==0.0.20
+
+# Dev
+ipykernel==6.30.0
+
+# Observability (IMPORTANT: compatible with langchain-core)
+langsmith>=0.3.45,<0.4.0
+
+# Data
+pandas==2.2.2
