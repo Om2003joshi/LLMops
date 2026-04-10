@@ -1,0 +1,208 @@
+📘 YAML NOTES FOR BEGINNERS (LLMOps / AI Systems)
+
+---
+
+🧠 1. What is YAML?
+
+YAML = A file used to store configuration (settings)
+
+👉 Simple meaning:
+YAML lets you control your program WITHOUT changing code.
+
+---
+
+❌ Without YAML (Hardcoding)
+
+Example:
+model_name = "gemini-2.0-flash"
+top_k = 10
+
+Problem:
+
+* You must change code every time
+* Risk of breaking system
+* Not good for real projects
+
+---
+
+✅ With YAML (Better Way)
+
+Example YAML file:
+
+embedding_model:
+provider: "google"
+model_name: "models/text-embedding-004"
+
+retriever:
+top_k: 10
+
+👉 Now code reads this file
+👉 You only change YAML, not code
+
+---
+
+🧠 2. Why YAML is used in AI / LLMOps?
+
+Because:
+
+* Models change often
+* Parameters need tuning
+* Multiple APIs used
+
+👉 YAML makes system flexible
+
+---
+
+🏗️ 3. Your YAML Structure (Important)
+
+Your file has 3 parts:
+
+1. embedding_model
+2. retriever
+3. llm
+
+👉 This matches real AI pipeline
+
+---
+
+🔄 4. Full AI Pipeline Understanding
+
+User Query
+↓
+Embedding Model (convert text → numbers)
+↓
+Retriever (find relevant docs)
+↓
+LLM (generate answer)
+↓
+Final Response
+
+---
+
+🔹 5. Embedding Model Section
+
+embedding_model:
+provider: "google"
+model_name: "models/text-embedding-004"
+
+Meaning:
+
+* provider → which company (Google, OpenAI)
+* model_name → which embedding model
+
+Purpose:
+Convert text into vectors for searching
+
+---
+
+🔹 6. Retriever Section
+
+retriever:
+top_k: 10
+search_type: "mmr"
+fetch_k: 20
+lambda_mult: 0.5
+
+Meaning:
+
+top_k:
+→ Return top 10 documents
+
+search_type:
+→ "similarity" = similar docs
+→ "mmr" = diverse + relevant docs
+
+fetch_k:
+→ First fetch 20 docs, then pick best 10
+
+lambda_mult:
+→ 0 = more diversity
+→ 1 = more relevance
+
+---
+
+🔹 7. LLM Section
+
+llm:
+google:
+provider: "google"
+model_name: "gemini-2.0-flash"
+temperature: 0
+max_output_tokens: 2048
+
+Meaning:
+
+provider:
+→ which API (Google, Groq)
+
+model_name:
+→ which LLM
+
+temperature:
+→ 0 = fixed answer
+→ 1 = creative answer
+
+max_output_tokens:
+→ max length of response
+
+---
+
+🔥 8. Biggest Advantage
+
+👉 Change system behavior WITHOUT touching code
+
+Example:
+Change model:
+model_name: "openai/gpt-oss-20b"
+
+👉 Done ✅
+
+---
+
+🧠 9. Real Industry Concept
+
+YAML = Control Panel
+
+Code = Machine
+
+👉 You don’t open machine
+👉 You just change settings
+
+---
+
+⚠️ 10. Common Mistakes
+
+❌ Hardcoding values in code
+❌ Not using config file
+❌ Mixing logic + settings
+
+---
+
+✅ 11. Best Practice
+
+* Keep all parameters in YAML
+* Keep code clean
+* Use YAML for experiments
+
+---
+
+🎯 FINAL UNDERSTANDING
+
+YAML = Brain of your AI system
+
+👉 It controls:
+
+* Model
+* Retrieval
+* Output behavior
+
+---
+
+🚀 YOU LEARNED:
+
+✔ Config-driven systems
+✔ RAG pipeline basics
+✔ Real LLMOps design
+✔ Industry-level thinking
+
+---
